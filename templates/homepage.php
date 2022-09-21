@@ -1,9 +1,9 @@
 <?php $title = "Election"; ?>
 
-<?php ob_start(); ?>
+<?php ob_start(); ?> 
 <fieldset>
 	<legend><b>ELECTION DE CP ET CPA G3 INFORMATIQUE</b></legend>
-	<form action="" method="">	
+	<form action="index.php?action=checkCode" method="post">	
 		<label>CODE</label> 
 		<input type="text" name="code">
 		<p> CANDIDAT CP </p>
@@ -16,21 +16,17 @@
 		<?php
 		}
 		?>
-		<input type="radio" name="cp" value="0"> 
-		<label> AUCUN CHOIX</label>
-
+	
 		<p> CANDIDAT CPA </p>
 		<?php
 		foreach ($cpas as $cpa) {
 		?>
-		<input type="radio" name="cpa" value="<?= $cp->id; ?>">
+		<input type="radio" name="cpa" value="<?= $cpa->id; ?>">
 		<label> N°<?= htmlspecialchars($cpa->id);?> <?= htmlspecialchars($cpa->name);?> 
 		<?= htmlspecialchars($cpa->lastname); ?> <?= htmlspecialchars($cpa->firstname); ?></label> <br>
 		<?php
 		}
 		?>
-		<input type="radio" name="cpa" value="0"> 
-		<label> AUCUN CHOIX</label> <br>
 		<input type="submit" value="VALIDER">
 	</form>
 </fieldset>

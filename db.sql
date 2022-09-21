@@ -1,13 +1,13 @@
 CREATE DATABASE ballot CHARACTER SET 'utf8';
 
 
-CREATE TABLE Electeurs (
+CREATE TABLE elector (
 id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
-NOM VARCHAR(20) NOT NULL,
-POSTNOM VARCHAR(20) NOT NULL,
-PRENOM VARCHAR(20) NOT NULL,
-CODE INT(4) NOT NULL,
-VOTE CHAR(3) DEFAULT 'NON' NOT NULL,
+name VARCHAR(20) NOT NULL,
+lastname VARCHAR(20) NOT NULL,
+firstname VARCHAR(20) NOT NULL,
+code INT(4) NOT NULL,
+vote CHAR(3) DEFAULT 'NON' NOT NULL,
 PRIMARY KEY (id)
 )ENGINE=INNODB;
 
@@ -49,7 +49,7 @@ PRIMARY KEY (id)
 )ENGINE=INNODB;
 
 
-INSERT INTO electeurs (NOM, POSTNOM, PRENOM, CODE)
+INSERT INTO elector (name, lastname, firstname, code)
 VALUES ('KABONGO', 'BILONDA', 'KELLY', '1100'),
 ('KABONGO', 'MUKENA', 'DIEUDO', '2018'),
 ('MPOYI', 'MUKENA', 'NATHAN', '1998'),
@@ -66,13 +66,14 @@ VALUES ('KABONGO', 'BILONDA', 'KELLY', '1100'),
 
 
 INSERT INTO cp (name, lastname, firstname, image)
-VALUES ('KALOMBO', 'MUKENA', 'BENJAMIN', 'templates\\images\\christine.jpg'),
-('TSHIMAKINDA', 'MUKENA', 'JOSEPH', 'templates\\images\\christine.jpg'),
-('MUKADI', 'MUKENA', 'JOE', 'templates\\images\\christine.jpg');
+VALUES ('KALOMBO', 'MUKENA', 'BENJAMIN', 'templates\\images\\ben.jpg'),
+('TSHIMAKINDA', 'MUKENA', 'JOSEPH', 'templates\\images\\joseph.jpg'),
+('MUKADI', 'MUKENA', 'JOE', 'templates\\images\\joe.png');
 
 
 INSERT INTO cpa (name, lastname, firstname, image)
 VALUES ('MUTUMBIKA', 'MUKENA', 'CHRISTINE', 'templates\\images\\christine.jpg'),
-('MUANDA', 'MBADU', 'YORGHEN', 'templates\\images\\christine.jpg'),
-('MUSHENDU', 'MUSHENDU', 'WILFRIED', 'templates\\images\\christine.jpg');
+('MUANDA', 'MBADU', 'YORGHEN', 'templates\\images\\yorghen.jpg'),
+('MUSHENDU', 'MUSHENDU', 'WILFRIED', 'templates\\images\\wilfried.png');
+
 

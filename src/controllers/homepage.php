@@ -14,9 +14,9 @@ class Homepage
     {
         $candidateRepository = new CandidateRepository();
         $candidateRepository->connection = new DatabaseConnection();
-        $cps = $candidateRepository->getCp();
-        $cpas = $candidateRepository->getCpa();
+        $cps = $candidateRepository->getCps();
+        $cpas = $candidateRepository->getCpas();
 
         require('templates/homepage.php');
     }
-}
+} 
